@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>自作パソコンを始める前の予備知識</title>
+  <style>
+    :root{
+      --bg: #ffffff;
+      --paper: #fbfbfb;
+      --text: #111111;
+      --muted: #6b6b6b;
+      --accent: #efefef; /* ハイライト（モノトーン） */
+      --max-width: 900px;
+      --gap: 28px;
+      --base-font: 18px;
+    }
+
+    /* リセット */
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:-apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.7;
+      font-size:var(--base-font);
+      padding:48px 20px;
+      display:flex;
+      justify-content:center;
+      align-items:flex-start;
+    }
+
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+      background:var(--paper);
+      border-radius:12px;
+      box-shadow:0 8px 30px rgba(17,17,17,0.06);
+      padding:40px;
+    }
+
+    header{margin-bottom:var(--gap)}
+    .eyebrow{color:var(--muted);font-size:14px;margin-bottom:8px}
+    h1{font-size:34px;margin:0 0 8px 0}
+    p.lead{margin:0;color:var(--muted);font-size:18px}
+
+    main{margin-top:24px}
+
+    section{margin-bottom:28px}
+    h2{font-size:22px;margin:0 0 12px 0}
+    p{margin:0 0 12px 0}
+
+    /* 強調 */
+    strong{font-weight:700}
+
+    /* ハイライトされた箇条書き */
+    .highlight-list{
+      background:var(--accent);
+      padding:18px;
+      border-radius:10px;
+      margin:12px 0;
+    }
+    .highlight-list ul{margin:0;padding-left:1.2em}
+    .highlight-list li{margin:8px 0}
+
+    /* コード風・例示ボックス */
+    .example{
+      background:#f7f7f7;
+      border-radius:8px;
+      padding:12px 14px;
+      font-family:Menlo, Monaco, "Courier New", monospace;
+      color:var(--muted);
+      font-size:15px;
+    }
+
+    /* フィートノート */
+    footer{border-top:1px solid #eaeaea;padding-top:18px;color:var(--muted);font-size:14px}
+
+    /* レスポンシブ調整 */
+    @media (max-width:640px){
+      :root{--base-font:16px}
+      .container{padding:24px}
+      h1{font-size:26px}
+      h2{font-size:18px}
+    }
+
+    /* 目次風サイド（モバイル時は隠す） */
+    .toc{float:right;width:220px;margin-left:24px;font-size:14px;color:var(--muted)}
+    @media (max-width:900px){.toc{display:none}}
+
+    /* アクセシビリティ */
+    a{color:inherit;text-decoration:underline}
+  </style>
+</head>
+<body>
+  <div class="container" role="main">
+    <header>
+      <div class="eyebrow">自作パソコン入門</div>
+      <h1>自作パソコンを始める前の予備知識</h1>
+      <p class="lead">自作PCに興味がある方向けに、知っておくと安心なポイントをシンプルにまとめました。</p>
+    </header>
+
+    <aside class="toc" aria-hidden="true">
+      <strong>目次</strong>
+      <ol>
+        <li>コスパは本当？</li>
+        <li>困ったときはどうする？</li>
+        <li>こんな人におすすめ</li>
+      </ol>
+    </aside>
+
+    <main>
+      <section id="cost">
+        <h2>1. <strong>コスパがいいのは本当？</strong></h2>
+        <p>「自作だと安くなる」とよく言われますが、<strong>必ずしも正しくありません</strong>。こだわるほど費用は増えます。</p>
+
+        <div class="highlight-list" aria-label="ポイント">
+          <ul>
+            <li><strong>見た目（ケース）</strong>：白や小型など、見た目にこだわると価格が上がりがちです。</li>
+            <li><strong>小型パーツ</strong>：小型向けのマザーボードや電源は通常サイズより割高です。</li>
+            <li><strong>買う場所</strong>：販売店やタイミングで価格差があります。</li>
+          </ul>
+        </div>
+
+        <p>結論：<strong>コスパ良くなるのは、</strong>どこを削ってどこにお金をかけるかを理解してから。初心者がいきなり“格安でハイスペック”を狙うのは難しいです。</p>
+      </section>
+
+      <section id="trouble">
+        <h2>2. <strong>困ったときにはどうするか</strong></h2>
+        <p>自作PCではトラブルはつきものです。中でも多いのが「電源を入れても起動しない」などの問題。</p>
+
+        <div class="highlight-list" aria-label="対処法">
+          <ul>
+            <li><strong>知識のある友人に聞く</strong>：近くに詳しい人がいればまず相談。</li>
+            <li><strong>ネットの情報を調べる</strong>：YouTubeやフォーラムに具体的な解決例が多くあります。</li>
+            <li><strong>AIに相談する</strong>：ChatGPTやGeminiに聞くときは、<em>症状＋使っているパーツ名</em>を伝えると有効です。</li>
+          </ul>
+        </div>
+
+        <p>ポイント：症状だけでなく、<strong>使っているパーツ名（例：マザーボード名・CPU・電源）を一緒に伝える</strong>と、適切な解決策が得やすくなります。</p>
+
+        <div class="example" aria-hidden="false">
+          例：「Z790のマザーボード＋Intel CPUで、電源を入れるとファンだけ回り画面が映りません」
+        </div>
+      </section>
+
+      <section id="who">
+        <h2>3. <strong>こんな人におすすめ</strong></h2>
+
+        <div class="highlight-list" aria-label="おすすめポイント">
+          <ul>
+            <li><strong>見た目にこだわりたい人</strong>：ケースやLEDなどで自由にカスタムできます。</li>
+            <li><strong>好きなパーツを選びたい人</strong>：用途に合わせて最適な構成にできます。</li>
+            <li><strong>トラブルを楽しめる人</strong>：問題解決を学ぶこと自体が面白い人に向きます。</li>
+          </ul>
+        </div>
+
+        <p>自作の魅力は<strong>自由さと愛着</strong>です。既製品では得られない満足感が手に入ります。</p>
+      </section>
+
+      <section id="conclusion">
+        <h2>まとめ</h2>
+        <p>自作パソコンは「安さ」だけではなく、「自分のこだわりを形にできる点」に価値があります。Webや動画の解説が充実しているので、まずは情報を集めながら気軽に挑戦してみましょう。</p>
+      </section>
+    </main>
+
+    <footer>
+      この記事は初心者向けの簡易ガイドです。詳しい構成や組み立て手順が必要なら、パーツ選びや手順のテンプレートも作れますのでお知らせください。
+    </footer>
+  </div>
+</body>
+</html>
